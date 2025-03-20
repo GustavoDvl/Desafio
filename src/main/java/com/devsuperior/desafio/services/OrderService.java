@@ -9,10 +9,10 @@ public class OrderService {
     @Autowired
     private ShippingService shippingService;
 
-    public double calculateTotal(Order order) {
-        double discount = order.getBasicValue() * (order.getDiscountPercentage() / 100);
-        double valueAfterDiscount = order.getBasicValue() - discount;
-        double shipping = shippingService.calculateShipping(order.getBasicValue());
+        public Double total(Order order){
+        double discount = order.getBasic() * (order.getDiscount() / 100);
+        double valueAfterDiscount = order.getBasic() - discount;
+        double shipping = shippingService.shipment(order.getBasic());
         return valueAfterDiscount + shipping;
+        }
     }
-}

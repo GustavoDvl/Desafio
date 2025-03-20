@@ -2,26 +2,26 @@ package com.devsuperior.desafio.entities;
 
 
 public class Order {
-    private Long code;
-    private double basicValue;
-    private double discountPercentage;
 
-    public Order(Long code, double basicValue, double discountPercentage) {
+    private Integer code;
+    private Double basic;
+    private Double discount;
+
+    public Order(Integer code, Double basic, Double discount) {
         this.code = code;
-        this.basicValue = basicValue;
-        this.discountPercentage = discountPercentage;
+        this.basic = basic;
+        this.discount = discount;
     }
 
-    // Getters e Setters
-    public Long getCode() {
+    public Integer getCode() {
         return code;
     }
 
-    public double getBasicValue() {
-        return basicValue;
+    public Double getBasic() {
+        return basic;
     }
 
-    public double getDiscountPercentage() {
-        return discountPercentage;
+    public Double getDiscount() {
+        return discount;
     }
 }
